@@ -24,7 +24,7 @@ const Product = ({ search }) => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('https://amazonclone-tz74.onrender.com/v1/products');
+      const response = await axios.get('https://amazonclone-tz74.onrender.com/api/v1/products');
       setProducts(response.data);
       setLoading(false);
     } catch (error) {
