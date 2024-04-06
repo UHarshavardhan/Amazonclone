@@ -21,7 +21,7 @@ const SignIn = () => {
         };
 
         setLoading(true);
-        axios.post('http://localhost:8000/api/v1/auth', data)
+        axios.post('https://amazonclone-tz74.onrender.com/api/v1/auth', data)
             .then((response) => {
                 if(response.status==200){
                     setSucessfull("Login sucessfull");

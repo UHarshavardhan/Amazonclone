@@ -17,7 +17,7 @@ const Categories = () => {
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/products/${id}`);
+        const response = await axios.get(`https://amazonclone-tz74.onrender.com/api/v1/products/${id}`);
         setProduct(response.data);
         
       } catch (error) {

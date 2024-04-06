@@ -19,7 +19,7 @@ const Signup=()=>{
     const navigate=useNavigate();
 
     const handlesignup = (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault(); 
         setLoading(true);
         const data = {
             email,
@@ -29,7 +29,7 @@ const Signup=()=>{
             contactNumber
         };
     
-        axios.post('http://localhost:8000/api/v1/users', data)
+        axios.post('https://amazonclone-tz74.onrender.com/api/v1/users', data)
             .then((response) => {
                 setLoading(false);
                 if (response.status === 200) {

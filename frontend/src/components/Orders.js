@@ -34,7 +34,7 @@ function OrderPage() {
            
            const token=sessionStorage.getItem("token");
             
-            const response = await axios.get('http://localhost:8000/api/v1/addresses', {
+            const response = await axios.get('https://amazonclone-tz74.onrender.com/api/v1/addresses', {
                 headers: {
                     'Authorization': `${token}`
                 }
@@ -55,7 +55,7 @@ function OrderPage() {
      
         try {
             const token = sessionStorage.getItem('token');
-            const response = await axios.post('http://localhost:8000/api/v1/addresses', {
+            const response = await axios.post('https://amazonclone-tz74.onrender.com/api/v1/addresses', {
                 name,
                 contactNumber,
                 city,
@@ -81,7 +81,7 @@ function OrderPage() {
         try {
             const token = sessionStorage.getItem('token');
             const selectedAddress = address[0]; 
-            const response = await axios.post('http://localhost:8000/api/v1/orders', {
+            const response = await axios.post('https://amazonclone-tz74.onrender.com/api/v1/orders', {
                 product: id,
                 quantity: quantity,
                 address: selectedAddress._id 

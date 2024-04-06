@@ -310,7 +310,7 @@
   }
   
   .logo{
-    background-image: url(https://www.amazon.com/ref=nav_logo);
+    background-image: url(https://www.amazon.com/https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg=nav_logo);
     height: 50px;
     width: 100%;
     background-size: cover;
@@ -392,7 +392,7 @@
      width: 250px;
      height: 100vh;
      display: flex;
-     justify-content: start;
+     justify-content: flex-start;
      position: fixed;
      top: 0;
      left: -100%;
