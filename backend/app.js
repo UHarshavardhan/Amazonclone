@@ -4,8 +4,7 @@ const cors = require("cors");
 const routes = require('./index');
 
 
-const connectionString = "mongodb://mrigank94:GqtjZDKarka3wHps@todo-shard-00-02.iwjw6.mongodb.net:27017,todo-shard-00-00.iwjw6.mongodb.net:27017,todo-shard-00-01.iwjw6.mongodb.net:27017/me?authSource=admin&replicaSet=Todo-shard-0&ssl=true";
-
+const connectionString = "mongodb+srv://mrigank94:GqtjZDKarka3wHps@todo.iwjw6.mongodb.net/mentos"
 // MongoDB connection options
 
 
