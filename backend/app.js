@@ -3,12 +3,18 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require('./index');
 
-const connectionString =
-  "mongodb+srv://mrigank94:GqtjZDKarka3wHps@todo.iwjw6.mongodb.net/mentos";
+
+const connectionString = "mongodb://mrigank94:GqtjZDKarka3wHps@todo-shard-00-02.iwjw6.mongodb.net:27017,todo-shard-00-00.iwjw6.mongodb.net:27017,todo-shard-00-01.iwjw6.mongodb.net:27017/me?authSource=admin&replicaSet=Todo-shard-0&ssl=true";
+
+// MongoDB connection options
+const mongoOptions = {
+  useNewUrlParser: true, // Use new URL parser
+  useUnifiedTopology: true, // Use new Server Discover and Monitoring engine
+};
 
 mongoose
-  .connect(connectionString)
-  .then((res) => console.log("Connected to db successfully"))
+  .connect(connectionString, mongoOptions)
+  .then(() => console.log("Connected to db successfully"))
   .catch((ex) => console.log(ex));
 
 const app = express();
@@ -19,7 +25,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use(cors());
 app.use(express.json());
 
 app.use('/', routes);
